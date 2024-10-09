@@ -1,0 +1,15 @@
+scripts/build
+scripts/deps
+/CMakeLists.txt.user
+/.idea
+/src/backend/opencl/cl/cn/cryptonight_gen.cl
+/.vs
+/.github
+/build/.vs
+/build/CMakeFiles
+/build/Debug
+/build/x64
+/build/xmrig.dir
+/build/xmrig-asm.dir
+Debug
+Release

@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+D:/vs2019/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/CheckCSourceCompiles.cmake
+D:/vs2019/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/Internal/CheckSourceCompiles.cmake
+G:/CStudy/xmrig-master/src/3rdparty/argon2/CMakeLists.txt

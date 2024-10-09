@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8B2B7F41-0E20-33A8-A006-82F8F2263AFA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>xmrig-asm</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\CStudy\xmrig-master\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmrig-asm.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xmrig-asm</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\CStudy\xmrig-master\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xmrig-asm.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xmrig-asm</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\CStudy\xmrig-master\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xmrig-asm.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xmrig-asm</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\CStudy\xmrig-master\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xmrig-asm.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xmrig-asm</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="Debug";;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IncludePaths>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="Release";;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IncludePaths>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="MinSizeRel";;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IncludePaths>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;RELWITHDEBINFO;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;RELWITHDEBINFO;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;RELWITHDEBINFO;XMRIG_64_BIT;RAPIDJSON_SSE2;XMRIG_FEATURE_SSE4_1;XMRIG_FEATURE_AVX2;XMRIG_OS_WIN;XMRIG_FEATURE_HTTP;XMRIG_FEATURE_API;XMRIG_FEATURE_ENV;XMRIG_FEATURE_BENCHMARK;XMRIG_FEATURE_HWLOC;XMRIG_FEATURE_OPENCL;CL_USE_DEPRECATED_OPENCL_1_2_APIS;CL_TARGET_OPENCL_VERSION=200;XMRIG_STRICT_OPENCL_CACHE;XMRIG_FEATURE_ADL;XMRIG_FEATURE_CUDA;XMRIG_FEATURE_NVML;XMRIG_VAES;XMRIG_MINER_PROJECT;XMRIG_JSON_SINGLE_LINE_ARRAY;__STDC_FORMAT_MACROS;UNICODE;_FILE_OFFSET_BITS=64;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;NOMINMAX;HAVE_ROTR;XMRIG_ALGO_RANDOMX;XMRIG_FEATURE_MSR;XMRIG_FIX_RYZEN;XMRIG_ALGO_ARGON2;XMRIG_ALGO_KAWPOW;XMRIG_ALGO_GHOSTRIDER;XMRIG_FEATURE_TLS;XMRIG_FEATURE_ASM;XMRIG_ALGO_CN_LITE;XMRIG_ALGO_CN_HEAVY;XMRIG_ALGO_CN_PICO;XMRIG_ALGO_CN_FEMTO;XMRIG_FEATURE_DMI;CMAKE_INTDIR="RelWithDebInfo";;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IncludePaths>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\CStudy\xmrig-master\src\3rdparty\hwloc\include;G:\CStudy\xmrig-deps-master\msvc2019\x64\include;G:\CStudy\xmrig-master\src;G:\CStudy\xmrig-master\src\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\CStudy\xmrig-master\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule G:/CStudy/xmrig-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SG:/CStudy/xmrig-master -BG:/CStudy/xmrig-master/build --check-stamp-file G:/CStudy/xmrig-master/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMCompiler.cmake.in;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASM_MASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckIncludeFile.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckSymbolExists.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenSSL.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeASM_MASMCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;G:\CStudy\xmrig-master\cmake\FindUV.cmake;G:\CStudy\xmrig-master\cmake\OpenSSL.cmake;G:\CStudy\xmrig-master\cmake\argon2.cmake;G:\CStudy\xmrig-master\cmake\asm.cmake;G:\CStudy\xmrig-master\cmake\cpu.cmake;G:\CStudy\xmrig-master\cmake\flags.cmake;G:\CStudy\xmrig-master\cmake\ghostrider.cmake;G:\CStudy\xmrig-master\cmake\kawpow.cmake;G:\CStudy\xmrig-master\cmake\os.cmake;G:\CStudy\xmrig-master\cmake\randomx.cmake;G:\CStudy\xmrig-master\src\backend\backend.cmake;G:\CStudy\xmrig-master\src\backend\common\common.cmake;G:\CStudy\xmrig-master\src\backend\cpu\cpu.cmake;G:\CStudy\xmrig-master\src\backend\cuda\cuda.cmake;G:\CStudy\xmrig-master\src\backend\opencl\opencl.cmake;G:\CStudy\xmrig-master\src\base\base.cmake;G:\CStudy\xmrig-master\src\hw\api\api.cmake;G:\CStudy\xmrig-master\src\hw\dmi\dmi.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\CStudy\xmrig-master\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule G:/CStudy/xmrig-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SG:/CStudy/xmrig-master -BG:/CStudy/xmrig-master/build --check-stamp-file G:/CStudy/xmrig-master/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMCompiler.cmake.in;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASM_MASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckIncludeFile.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckSymbolExists.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenSSL.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeASM_MASMCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;G:\CStudy\xmrig-master\cmake\FindUV.cmake;G:\CStudy\xmrig-master\cmake\OpenSSL.cmake;G:\CStudy\xmrig-master\cmake\argon2.cmake;G:\CStudy\xmrig-master\cmake\asm.cmake;G:\CStudy\xmrig-master\cmake\cpu.cmake;G:\CStudy\xmrig-master\cmake\flags.cmake;G:\CStudy\xmrig-master\cmake\ghostrider.cmake;G:\CStudy\xmrig-master\cmake\kawpow.cmake;G:\CStudy\xmrig-master\cmake\os.cmake;G:\CStudy\xmrig-master\cmake\randomx.cmake;G:\CStudy\xmrig-master\src\backend\backend.cmake;G:\CStudy\xmrig-master\src\backend\common\common.cmake;G:\CStudy\xmrig-master\src\backend\cpu\cpu.cmake;G:\CStudy\xmrig-master\src\backend\cuda\cuda.cmake;G:\CStudy\xmrig-master\src\backend\opencl\opencl.cmake;G:\CStudy\xmrig-master\src\base\base.cmake;G:\CStudy\xmrig-master\src\hw\api\api.cmake;G:\CStudy\xmrig-master\src\hw\dmi\dmi.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\CStudy\xmrig-master\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule G:/CStudy/xmrig-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SG:/CStudy/xmrig-master -BG:/CStudy/xmrig-master/build --check-stamp-file G:/CStudy/xmrig-master/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMCompiler.cmake.in;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASM_MASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckIncludeFile.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckSymbolExists.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenSSL.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeASM_MASMCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;G:\CStudy\xmrig-master\cmake\FindUV.cmake;G:\CStudy\xmrig-master\cmake\OpenSSL.cmake;G:\CStudy\xmrig-master\cmake\argon2.cmake;G:\CStudy\xmrig-master\cmake\asm.cmake;G:\CStudy\xmrig-master\cmake\cpu.cmake;G:\CStudy\xmrig-master\cmake\flags.cmake;G:\CStudy\xmrig-master\cmake\ghostrider.cmake;G:\CStudy\xmrig-master\cmake\kawpow.cmake;G:\CStudy\xmrig-master\cmake\os.cmake;G:\CStudy\xmrig-master\cmake\randomx.cmake;G:\CStudy\xmrig-master\src\backend\backend.cmake;G:\CStudy\xmrig-master\src\backend\common\common.cmake;G:\CStudy\xmrig-master\src\backend\cpu\cpu.cmake;G:\CStudy\xmrig-master\src\backend\cuda\cuda.cmake;G:\CStudy\xmrig-master\src\backend\opencl\opencl.cmake;G:\CStudy\xmrig-master\src\base\base.cmake;G:\CStudy\xmrig-master\src\hw\api\api.cmake;G:\CStudy\xmrig-master\src\hw\dmi\dmi.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\CStudy\xmrig-master\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule G:/CStudy/xmrig-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SG:/CStudy/xmrig-master -BG:/CStudy/xmrig-master/build --check-stamp-file G:/CStudy/xmrig-master/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMCompiler.cmake.in;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeASM_MASMInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeTestASM_MASMCompiler.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckCXXSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckIncludeFile.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CheckSymbolExists.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindOpenSSL.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckCompilerFlag.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Internal\CheckSourceCompiles.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\vs2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeASM_MASMCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake;G:\CStudy\xmrig-master\build\CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake;G:\CStudy\xmrig-master\cmake\FindUV.cmake;G:\CStudy\xmrig-master\cmake\OpenSSL.cmake;G:\CStudy\xmrig-master\cmake\argon2.cmake;G:\CStudy\xmrig-master\cmake\asm.cmake;G:\CStudy\xmrig-master\cmake\cpu.cmake;G:\CStudy\xmrig-master\cmake\flags.cmake;G:\CStudy\xmrig-master\cmake\ghostrider.cmake;G:\CStudy\xmrig-master\cmake\kawpow.cmake;G:\CStudy\xmrig-master\cmake\os.cmake;G:\CStudy\xmrig-master\cmake\randomx.cmake;G:\CStudy\xmrig-master\src\backend\backend.cmake;G:\CStudy\xmrig-master\src\backend\common\common.cmake;G:\CStudy\xmrig-master\src\backend\cpu\cpu.cmake;G:\CStudy\xmrig-master\src\backend\cuda\cuda.cmake;G:\CStudy\xmrig-master\src\backend\opencl\opencl.cmake;G:\CStudy\xmrig-master\src\base\base.cmake;G:\CStudy\xmrig-master\src\hw\api\api.cmake;G:\CStudy\xmrig-master\src\hw\dmi\dmi.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\CStudy\xmrig-master\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="G:\CStudy\xmrig-master\src\crypto\cn\asm\cn_main_loop.asm" />
+    <MASM Include="G:\CStudy\xmrig-master\src\crypto\cn\asm\CryptonightR_template.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:\CStudy\xmrig-master\build\ZERO_CHECK.vcxproj">
+      <Project>{CAF178CC-65B9-3BB0-9995-3C8647341CD3}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
